@@ -1,16 +1,16 @@
 users:
-  - name: openproject
-    password: $POSTGRESQL_OPENPROJECT_PASSWORD
+  - name: dotnet
+    password: $POSTGRESQL_DOTNET_PASSWORD
     role: superuser
 databases:
-  - name: openproject
-    owner: openproject
+  - name: dotnet
+    owner: dotnet
     tablespace:
       - name: tb1
         location: /appz/data/tb1
     schemas:
       - name: schema1
-        authorised_user: openproject
+        authorised_user: dotnet
         search_path: true
 
  
