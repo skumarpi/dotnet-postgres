@@ -12,5 +12,3 @@ databases:
       - name: schema1
         authorised_user: dotnet
         search_path: true
-
- 
