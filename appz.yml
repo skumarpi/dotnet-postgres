@@ -1,6 +1,6 @@
 app:
-    name: OpenProject Postgres Master
-    code: OpenProjectPostgres
+    name: DotNet Postgres Master
+    code: DotNetProjectPostgres
     notify: appz@ecloudcontrol.com
     
 build:
@@ -18,11 +18,16 @@ deploy:
     - 5432
     
 volumes:
-  - claim: postgres-master-data
+  - claim: dotnet-postgres-master-data
     mount: /appz/data
     name: data
     size: 5Gi
-    mode: ReadWriteOnce   
+    mode: ReadWriteOnce
+  - claim: dotnet-postgres-master-backup
+    mount: /appz/backup
+    name: backup
+    size: 5Gi
+    mode: ReadWriteOnce      
     
 properties:
     POSTGRESQL_REPLICATION_MODE: master
